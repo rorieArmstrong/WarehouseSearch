@@ -13,12 +13,14 @@ export default function App() {
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
       <TextInput
-        style={{ height: 40,width: 80, borderColor: 'gray', borderWidth: 1 }}
+        style={styles.input}
         onChangeText={text => setQuerry(text)}
         value={querry}
       />
       <Button
+        style={styles.button}
         onPress={search}
+        disabled={this.state.querry.length == 0}
         title="Search"
         color="#841584"
         accessibilityLabel="Start Search"
@@ -34,5 +36,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  input: { 
+    height: 40,
+    borderColor: 'gray', 
+    borderWidth: 10 ,
+  },
+  button : {
+
   },
 });
