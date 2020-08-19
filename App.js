@@ -1,18 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import Header from './App/components/Header';
 
 export default function App() {
-  const [querry, setQuerry] = useState('')
+  // const [querry, setQuerry] = useState('')
 
-  const search = () => {
+  // const search = () => {
 
-  }
+  // }
 
   return (
     <View style={styles.container}>
+      <Header/>
       <Text>Open up App.js to start working on your app!</Text>
-      <TextInput
+      {/* <TextInput
         style={styles.input}
         onChangeText={text => setQuerry(text)}
         value={querry}
@@ -24,7 +26,7 @@ export default function App() {
         title="Search"
         color="#841584"
         accessibilityLabel="Start Search"
-      />
+      /> */}
       <StatusBar style="auto" />
     </View>
   );
@@ -40,7 +42,7 @@ const styles = StyleSheet.create({
   input: { 
     height: 40,
     borderColor: 'gray', 
-    borderWidth: 10 ,
+    borderWidth: 2,
   },
   button : {
 
